@@ -1,0 +1,390 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: #ffffff;
+    color: #000000;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* HEADER */
+
+.header {
+    width: 100%;
+    min-height: 80px;
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    background: #FCEFF3;
+    border-bottom: 1px solid #F0D8DF;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    color: #B87582;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.navigation a {
+    color: #8F5968;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    color: #B87582;
+}
+
+.navigation a.active {
+    font-weight: 700;
+}
+
+.login-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: #D99AAE;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.login-button:hover {
+    background: #C9859B;
+}
+
+/* HERO */
+
+.hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero h1 {
+    width: 100%;
+    padding: 80px 10px;
+    text-align: center;
+    font-family: 'Crimson Text', serif;
+    font-size: clamp(64px, 12vw, 160px);
+    line-height: 0.9;
+    letter-spacing: -6px;
+    font-weight: 400;
+}
+
+.hero-image {
+    width: 100%;
+    min-height: 850px;
+    padding: 32px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 30px;
+    background: #F9EFF9;
+}
+
+.ipad {
+    position: relative;
+    width: min(907px, 95vw);
+    height: min(800px, 85vw);
+    min-height: 400px;
+    overflow: hidden;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-bottom: none;
+    border-radius: 24px;
+    background: #000;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+}
+
+.inner-screen {
+    position: absolute;
+    inset: 16px;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.inner-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* CONTEÚDO */
+
+.content {
+    width: 100%;
+    padding: 0 clamp(20px, 5vw, 60px);
+}
+
+.centered-cta {
+    position: relative;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 120px clamp(24px, 8vw, 120px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    border-top: 1px solid #e9e9e9;
+}
+
+.main-text {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    font-family: 'Crimson Text', serif;
+    font-size: clamp(30px, 5vw, 60px);
+    line-height: 0.9;
+    letter-spacing: -1.8px;
+}
+
+/* BOTÕES */
+
+.main-button {
+    width: 100%;
+    max-width: 500px;
+    min-height: 80px;
+    padding: 14px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 50px;
+    background: #F9EFF9;
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.main-button:hover {
+    background: #F0E1F0;
+    transform: translateY(-2px);
+}
+
+.arrow {
+    font-size: 18px;
+}
+
+/* DEPOIMENTO */
+
+.testimonial {
+    width: 100%;
+    max-width: 1500px;
+    min-height: 600px;
+    margin: 0 auto;
+    padding-bottom: 120px;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.testimonial-image {
+    flex: 1 1 45%;
+    min-width: 0;
+    aspect-ratio: 559 / 662;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.quote {
+    position: relative;
+    flex: 1 1 45%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    padding: 32px 0 32px 50px;
+    border-top: 1px solid #e9e9e9;
+}
+
+.quote > p {
+    font-family: 'Crimson Text', serif;
+    font-size: clamp(28px, 3vw, 40px);
+    line-height: 1;
+    letter-spacing: -1.6px;
+}
+
+.author {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.author span {
+    font-size: 15px;
+}
+
+.author small {
+    color: #929292;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+}
+
+/* DENUNCIE */
+
+.denuncia {
+    position: relative;
+    width: 100%;
+    padding: 100px clamp(40px, 12vw, 180px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    border-top: 1px solid #e9e9e9;
+    text-align: center;
+}
+
+.denuncia h2 {
+    width: 100%;
+    font-family: 'Crimson Text', serif;
+    font-size: clamp(42px, 6vw, 60px);
+    line-height: 0.9;
+    letter-spacing: -1.8px;
+    font-weight: 400;
+}
+
+.denuncia p {
+    width: 100%;
+    color: #6f6f6f;
+    font-size: clamp(16px, 2vw, 20px);
+    line-height: 1.4;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .header {
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .logo {
+        width: 100%;
+        align-items: center;
+    }
+
+    .navigation {
+        gap: 15px;
+    }
+
+    .navigation a {
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        padding: 60px 10px;
+        letter-spacing: -3px;
+    }
+
+    .hero-image {
+        min-height: 500px;
+    }
+
+    .ipad {
+        height: 85vw;
+        min-height: 350px;
+    }
+
+    .centered-cta {
+        padding: 80px 15px;
+    }
+
+    .testimonial {
+        flex-direction: column;
+        padding-bottom: 80px;
+    }
+
+    .testimonial-image {
+        width: 100%;
+        flex: none;
+    }
+
+    .quote {
+        width: 100%;
+        flex: none;
+        min-height: 350px;
+        padding: 40px 10px;
+    }
+
+    .denuncia {
+        padding: 80px 15px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .navigation {
+        gap: 12px;
+    }
+
+    .navigation a {
+        font-size: 12px;
+    }
+
+    .login-button {
+        padding: 9px 18px;
+    }
+
+    .hero-image {
+        min-height: 400px;
+    }
+
+    .ipad {
+        min-height: 300px;
+    }
+
+    .main-button {
+        min-height: 60px;
+        font-size: 18px;
+    }
+
+}
