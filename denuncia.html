@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Denúncia | Security Woman</title>
+
+    <link rel="stylesheet" href="/css/denuncia.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Crimson+Text&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <a href="/" class="logo" aria-label="Security Woman - Página inicial">
+            <span>SECURITY</span>
+            <span>WOMAN</span>
+        </a>
+
+        <nav class="navigation" aria-label="Navegação principal">
+
+            <a href="/">Início</a>
+            <a href="/denuncia" class="active" aria-current="page">Denúncia</a>
+            <a href="/contatos">Contatos</a>
+            <a href="/saiba-mais">Saiba Mais</a>
+
+        </nav>
+
+        <a href="/login" class="login-button">
+            Login <span>›</span>
+        </a>
+
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+
+    <main class="layout" id="denuncia">
+
+
+        <!-- COLUNA DE APRESENTAÇÃO -->
+
+        <aside class="apresentacao" id="inicio">
+
+            <div class="apresentacao-conteudo">
+
+                <span class="etiqueta">
+                    VOCÊ NÃO ESTÁ SOZINHA
+                </span>
+
+                <h1>Sua voz importa.</h1>
+
+                <p>
+                    Este é um espaço de acolhimento para você relatar
+                    o que aconteceu e buscar ajuda.
+                </p>
+
+                <div class="protecao">
+
+                    <span class="protecao-icone" aria-hidden="true">♧</span>
+
+                    <div>
+
+                        <strong>Privacidade e proteção</strong>
+
+                        <p>
+                            Compartilhe apenas as informações com as quais
+                            se sentir confortável.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- FORMULÁRIO -->
+
+        <section class="formulario">
+
+            <span class="categoria">DENÚNCIA</span>
+
+            <h2>Faça sua denúncia</h2>
+
+            <p class="subtitulo">
+                Conte o que aconteceu no seu tempo. Os campos
+                opcionais podem ficar em branco.
+            </p>
+
+
+            <form id="denuncia-form">
+
+                <!-- IDENTIFICAÇÃO -->
+
+                <div class="bloco">
+
+                    <h3>1. Como deseja se identificar?</h3>
+
+                    <label class="opcao">
+
+                        <input
+                            type="radio"
+                            name="identificacao"
+                            value="identificada"
+                            id="identificada"
+                            checked
+                        >
+
+                        Quero me identificar
+
+                    </label>
+
+                    <label class="opcao">
+
+                        <input
+                            type="radio"
+                            name="identificacao"
+                            value="anonima"
+                            id="anonima"
+                        >
+
+                        Prefiro não informar meu nome
+
+                    </label>
+
+
+                    <div class="campo" id="campo-nome">
+
+                        <label for="nome">
+                            Nome (opcional)
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite seu nome completo"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- TIPOS DE VIOLÊNCIA -->
+
+                <div class="bloco">
+
+                    <h3>
+                        2. Qual tipo de violência deseja relatar?
+                    </h3>
+
+                    <p>
+                        Selecione todas as opções que se aplicam.
+                    </p>
+
+                    <div class="checkbox-grid">
+
+                        <label class="opcao">
+                            <input type="checkbox" name="tipos" value="Violência física">
+                            Violência física
+                        </label>
+
+                        <label class="opcao">
+                            <input type="checkbox" name="tipos" value="Violência patrimonial">
+                            Violência patrimonial
+                        </label>
+
+                        <label class="opcao">
+                            <input type="checkbox" name="tipos" value="Violência psicológica ou emocional">
+                            Violência psicológica ou emocional
+                        </label>
+
+                        <label class="opcao">
+                            <input type="checkbox" name="tipos" value="Assédio">
+                            Assédio
+                        </label>
+
+                        <label class="opcao">
+                            <input type="checkbox" name="tipos" value="Violência sexual">
+                            Violência sexual
+                        </label>
+
+                        <label class="opcao">
+                            <input type="checkbox" name="tipos" value="Não sei identificar">
+                            Não sei identificar
+                        </label>
+
+                        <label class="opcao">
+                            <input type="checkbox" name="tipos" value="Violência moral">
+                            Violência moral
+                        </label>
+
+                        <label class="opcao">
+                            <input type="checkbox" name="tipos" value="Outro tipo">
+                            Outro tipo
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RELATO -->
+
+                <div class="bloco">
+
+                    <h3>3. Conte o que aconteceu</h3>
+
+                    <p>
+                        Compartilhe apenas o que se sentir confortável
+                        em contar.
+                    </p>
+
+                    <textarea
+                        id="relato"
+                        name="relato"
+                        maxlength="2000"
+                        placeholder="Descreva a situação com suas palavras..."
+                    ></textarea>
+
+                    <div class="contador">
+                        <span id="contador">0</span>/2000
+                    </div>
+
+
+                    <!-- LOCAL E DATA -->
+
+                    <div class="campos-duplos">
+
+                        <div class="campo">
+
+                            <label for="local">
+                                Onde aconteceu? (opcional)
+                            </label>
+
+                            <input
+                                type="text"
+                                id="local"
+                                name="local"
+                                placeholder="Cidade ou região"
+                            >
+
+                        </div>
+
+                        <div class="campo">
+
+                            <label for="data">
+                                Quando aconteceu? (opcional)
+                            </label>
+
+                            <input
+                                type="date"
+                                id="data"
+                                name="data"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- COLUNA LATERAL -->
+
+        <aside class="lateral">
+
+
+            <!-- EMERGÊNCIA -->
+
+            <div class="painel emergencia" id="contatos">
+
+                <h3>Em caso de perigo imediato</h3>
+
+                <p>
+                    Se você estiver em risco, procure um local seguro
+                    e ligue:
+                </p>
+
+
+                <a href="tel:190" class="telefone">
+
+                    <span aria-hidden="true">☎</span>
+
+                    <div>
+
+                        <strong>Ligue 190</strong>
+
+                        <small>Polícia Militar</small>
+
+                    </div>
+
+                </a>
+
+
+                <a href="tel:180" class="telefone">
+
+                    <span aria-hidden="true">☎</span>
+
+                    <div>
+
+                        <strong>Ligue 180</strong>
+
+                        <small>Central de Atendimento à Mulher</small>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- PERIGO IMEDIATO -->
+
+            <div class="painel">
+
+                <h3>
+                    4. Você está em perigo neste momento?
+                </h3>
+
+                <label class="opcao">
+
+                    <input
+                        type="radio"
+                        name="perigo"
+                        value="Sim"
+                    >
+
+                    Sim
+
+                </label>
+
+                <label class="opcao">
+
+                    <input
+                        type="radio"
+                        name="perigo"
+                        value="Não"
+                    >
+
+                    Não
+
+                </label>
+
+                <label class="opcao">
+
+                    <input
+                        type="radio"
+                        name="perigo"
+                        value="Não tenho certeza"
+                    >
+
+                    Não tenho certeza
+
+                </label>
+
+
+                <div class="alerta" id="alerta-perigo" hidden>
+
+                    <strong>Sua segurança vem primeiro.</strong>
+
+                    <p>
+                        Se for seguro, procure proteção e ligue 190.
+                        Não espere o envio deste formulário.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTATO SEGURO -->
+
+            <div class="painel">
+
+                <h3>
+                    5. É seguro entrar em contato com você?
+                </h3>
+
+                <div class="opcoes-linha">
+
+                    <label class="opcao">
+
+                        <input
+                            type="radio"
+                            name="contato"
+                            value="sim"
+                        >
+
+                        Sim
+
+                    </label>
+
+                    <label class="opcao">
+
+                        <input
+                            type="radio"
+                            name="contato"
+                            value="nao"
+                            checked
+                        >
+
+                        Não
+
+                    </label>
+
+                </div>
+
+
+                <div id="campos-contato" hidden>
+
+                    <div class="campo">
+
+                        <label for="meio-contato">
+                            Meio de contato (opcional)
+                        </label>
+
+                        <input
+                            type="text"
+                            id="meio-contato"
+                            name="meio-contato"
+                            placeholder="E-mail ou telefone"
+                        >
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label for="horario">
+                            Horário seguro (opcional)
+                        </label>
+
+                        <input
+                            type="text"
+                            id="horario"
+                            name="horario"
+                            placeholder="Ex.: período da manhã"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BOTÃO ENVIAR -->
+
+            <button
+                class="enviar"
+                type="button"
+                id="enviar-denuncia"
+            >
+
+                Enviar denúncia →
+
+            </button>
+
+
+            <!-- PRIVACIDADE -->
+
+            <div class="privacidade" id="saiba-mais">
+
+                <strong>
+                    ♧ Privacidade e segurança
+                </strong>
+
+                <p>
+                    Protótipo visual. Para receber denúncias reais, é
+                    necessário implementar proteção de dados,
+                    consentimento e encaminhamento seguro.
+                </p>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+
+    <script src="/js/denuncia.js"></script>
+
+</body>
+
+</html>
