@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#75464c">
+  <title>Security Woman | Painel Administrativo</title>
+
+  <link rel="stylesheet" href="/css/paineladm_denuncias.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="painel-app">
+
+    <!-- MENU LATERAL -->
+    <aside class="sidebar">
+
+      <div class="sidebar-logo">
+        <span class="sidebar-flor">✿</span>
+
+        <span class="logo-texto">
+          Security
+          <span>Woman</span>
+          <small>SEGURANÇA E ACOLHIMENTO</small>
+        </span>
+      </div>
+
+      <div class="sidebar-divider"></div>
+
+      <div class="sidebar-heading">
+        MENU PRINCIPAL
+      </div>
+
+      <nav class="sidebar-menu">
+
+        <button class="menu-item menu-ativo"
+                data-pagina="denuncias">
+          <span class="menu-icone">⚑</span>
+          <span>Denúncias</span>
+          <span class="menu-indicador"></span>
+        </button>
+
+        <button class="menu-item"
+                data-pagina="cadastro">
+          <span class="menu-icone">＋</span>
+          <span>Cadastrar usuário</span>
+          <span class="menu-indicador"></span>
+        </button>
+
+        <button class="menu-item"
+                data-pagina="usuarios">
+          <span class="menu-icone">♙</span>
+          <span>Lista de usuários</span>
+          <span class="menu-indicador"></span>
+        </button>
+
+      </nav>
+
+      <div class="sidebar-bottom">
+
+        <div class="sidebar-divider"></div>
+
+        <div class="sidebar-mensagem">
+          <span>✿</span>
+          <p>Mais mulheres conectadas, mais segurança para todas.</p>
+        </div>
+
+        <div class="sidebar-copyright">
+          SECURITY WOMAN
+        </div>
+
+      </div>
+
+    </aside>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="conteudo-principal">
+
+      <!-- PÁGINA DE DENÚNCIAS -->
+      <section id="pagina-denuncias" class="pagina-tela ativa">
+
+        <div class="pagina">
+
+          <header class="cabecalho">
+
+            <div>
+              <span class="subtitulo">PAINEL ADMINISTRATIVO</span>
+              <h1>Denúncias</h1>
+              <p>Acompanhe as respostas do formulário de denúncia.</p>
+            </div>
+
+            <div class="ferramentas">
+
+              <input
+                type="search"
+                id="busca"
+                placeholder="Buscar denúncia..."
+              >
+
+              <select id="filtro">
+                <option value="Todos">Todos os status</option>
+                <option value="Nova">Nova</option>
+                <option value="Em análise">Em análise</option>
+                <option value="Em andamento">Em andamento</option>
+                <option value="Resolvida">Resolvida</option>
+              </select>
+
+            </div>
+
+          </header>
+
+          <div class="resumo">
+            <div class="resumo-card">
+              <span>Total de denúncias</span>
+              <strong id="total-denuncias">2</strong>
+            </div>
+
+            <div class="resumo-card">
+              <span>Novas denúncias</span>
+              <strong id="total-novas">1</strong>
+            </div>
+
+            <div class="resumo-card">
+              <span>Em andamento</span>
+              <strong id="total-andamento">1</strong>
+            </div>
+          </div>
+
+          <!-- TABELA -->
+          <div class="tabela-container">
+
+            <table>
+
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Data do registro</th>
+                  <th>Identificação</th>
+                  <th>Tipo de violência</th>
+                  <th>Relato</th>
+                  <th>Local</th>
+                  <th>Data do ocorrido</th>
+                  <th>Perigo atual</th>
+                  <th>Contato seguro</th>
+                  <th>Status</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+
+              <tbody id="corpo-tabela"></tbody>
+
+            </table>
+
+            <p class="vazio" id="mensagem-vazia" hidden>
+              Nenhuma denúncia encontrada.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+    <section id="pagina-cadastro" class="pagina-tela">
+
+    <div class="pagina">
+
+        <header class="cabecalho">
+        <div>
+            <span class="subtitulo">GERENCIAMENTO</span>
+            <h1>Cadastrar usuário</h1>
+            <p>Cadastre um novo usuário na plataforma.</p>
+        </div>
+        </header>
+
+        <div class="cadastro-layout">
+
+        <div class="banner-cadastro">
+            <span>SECURITY WOMAN</span>
+
+            <h2>
+            Mais mulheres<br>
+            conectadas,<br>
+            mais segurança<br>
+            para todas.
+            </h2>
+
+            <p>
+            Informação, acolhimento e proteção em um só lugar.
+            </p>
+
+            <div class="banner-flor">✿</div>
+        </div>
+
+        <form class="form-cadastro" id="form-cadastro">
+
+            <div class="form-grid">
+
+            <div class="campo">
+                <label for="nome">Nome completo</label>
+                <input
+                id="nome"
+                name="nome"
+                required
+                placeholder="Digite o nome completo"
+                >
+            </div>
+
+            <div class="campo">
+                <label for="email">E-mail</label>
+                <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                placeholder="Digite o e-mail"
+                >
+            </div>
+
+            <div class="campo">
+                <label for="telefone">Telefone</label>
+                <input
+                id="telefone"
+                name="telefone"
+                type="tel"
+                placeholder="(00) 00000-0000"
+                >
+            </div>
+
+            <div class="campo">
+                <label for="nascimento">Data de nascimento</label>
+                <input
+                id="nascimento"
+                name="nascimento"
+                type="date"
+                >
+            </div>
+
+            <div class="campo">
+                <label for="senha">Senha</label>
+                <input
+                id="senha"
+                name="senha"
+                type="password"
+                required
+                minlength="8"
+                placeholder="Crie uma senha"
+                >
+            </div>
+
+            <div class="campo">
+                <label for="tipo">Tipo de usuário</label>
+                <select id="tipo" name="tipo" required>
+                <option value="">Selecione</option>
+                <option value="Usuária">Usuária</option>
+                <option value="Atendente">Atendente</option>
+                <option value="Administradora">Administradora</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="cidade">Cidade</label>
+                <input
+                id="cidade"
+                name="cidade"
+                placeholder="Digite a cidade"
+                >
+            </div>
+
+            <div class="campo">
+                <label for="estado">Estado</label>
+                <select id="estado" name="estado">
+                <option value="">Selecione</option>
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="GO">Goiás</option>
+                <option value="PR">Paraná</option>
+                <option value="Outro">Outro estado</option>
+                </select>
+            </div>
+
+            </div>
+
+            <div class="botoes-form">
+
+            <button
+                type="button"
+                class="botao-secundario"
+                id="limpar-cadastro"
+            >
+                Limpar
+            </button>
+
+            <button
+                type="submit"
+                class="botao-principal"
+            >
+                Cadastrar usuário
+            </button>
+
+            </div>
+
+        </form>
+
+        </div>
+
+    </div>
+
+    </section>
+
+     
+    <section id="pagina-usuarios" class="pagina-tela">
+
+    <div class="pagina">
+
+        <header class="cabecalho">
+
+        <div>
+            <span class="subtitulo">GERENCIAMENTO</span>
+            <h1>Usuários</h1>
+            <p>
+            Visualize todos os usuários cadastrados na plataforma.
+            </p>
+        </div>
+
+        <div class="ferramentas">
+
+            <input
+            type="search"
+            id="busca-usuarios"
+            placeholder="Buscar usuário..."
+            >
+
+            <select id="filtro-usuarios">
+            <option value="Todos">Todos</option>
+            <option value="Ativa">Ativa</option>
+            <option value="Inativa">Inativa</option>
+            </select>
+
+        </div>
+
+        </header>
+
+        <div class="tabela-container">
+
+        <table>
+
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Telefone</th>
+                <th>Nascimento</th>
+                <th>Tipo de usuário</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+
+            <tbody id="corpo-tabela-usuarios"></tbody>
+
+        </table>
+
+        <p class="vazio" id="usuarios-vazios" hidden>
+            Nenhum usuário encontrado.
+        </p>
+
+        </div>
+
+    </div>
+
+    </section>
+
+    </main>
+
+  </div>
+
+  <!-- MODAL DE VISUALIZAÇÃO -->
+  <div class="modal-fundo" id="modal-fundo" hidden>
+
+    <div
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="titulo-denuncia"
+    >
+
+      <button class="modal-fechar" id="fechar-modal" aria-label="Fechar">
+        ×
+      </button>
+
+      <span class="subtitulo">DETALHES DO REGISTRO</span>
+
+      <h2 id="titulo-denuncia">Denúncia</h2>
+
+      <div id="conteudo-modal"></div>
+
+      <button class="botao-principal" id="botao-fechar">
+        Fechar
+      </button>
+
+    </div>
+
+  </div>
+
+  <script src="/js/paineladm_denuncias.js"></script>
+
+</body>
+</html>
